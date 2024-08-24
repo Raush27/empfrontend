@@ -1,0 +1,223 @@
+@import "variables";
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+// headline -----
+@mixin headline {
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin headline1 {
+  @include headline;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -0.01em;
+
+  @media (max-width: 767px) {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+}
+
+@mixin headline2 {
+  @include headline;
+  font-size: 32px;
+  line-height: 34px;
+  letter-spacing: -0.005em;
+  margin-bottom: 15px;
+
+  @media (max-width: 767px) {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+}
+
+@mixin headline3 {
+  @include headline;
+  font-size: 25px;
+  line-height: 32px;
+
+  @media (max-width: 767px) {
+    font-size: 23px;
+    line-height: 1.2;
+  }
+}
+
+@mixin headline4 {
+  @include headline;
+  font-size: 24px;
+  line-height: 32px;
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+}
+
+// milan font -----
+@mixin milan-font(
+  $size,
+  $height: normal,
+  $weight: 400,
+  $spacing: normal,
+  $style: normal
+) {
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+
+@mixin font-main {
+  @include milan-font(17px, 24px);
+}
+
+@mixin font-main-bold {
+  @include milan-font(17px, 24px, bold);
+}
+
+@mixin font-main-italic {
+  @include milan-font(17px, 24px, normal, normal, italic);
+}
+
+@mixin font-lead {
+  @include milan-font(20px, 28px);
+}
+
+@mixin font-lead-bold {
+  @include milan-font(20px, 28px, bold);
+}
+
+@mixin font-lead-italic {
+  @include milan-font(20px, 28px, normal, normal, italic);
+}
+
+@mixin font-small {
+  @include milan-font(14px, 20px);
+}
+
+@mixin font-small-bold {
+  @include milan-font(14px, 20px, bold);
+}
+
+@mixin font-x-small {
+  @include milan-font(10px, 16px);
+}
+
+@mixin font-x-small-bold {
+  @include milan-font(10px, 16px, bold);
+}
+
+@mixin label-large {
+  @include milan-font(20px, 22px);
+
+  @media (max-width: 767px) {
+    @include milan-font(18px, 20px);
+  }
+}
+
+@mixin label-large-bold {
+  @include milan-font(20px, 22px, bold);
+
+  @media (max-width: 767px) {
+    @include milan-font(18px, 20px, bold);
+  }
+}
+
+@mixin label-x-large {
+  @include milan-font(24px, 28px);
+
+  @media (max-width: 767px) {
+    @include milan-font(20px, 24px);
+  }
+}
+
+@mixin label-x-large-bold {
+  @include milan-font(24px, 28px, 500);
+
+  @media (max-width: 767px) {
+    @include milan-font(20px, 23px, 500);
+  }
+}
+
+@mixin label-medium {
+  @include milan-font(18px, 18px);
+}
+
+@mixin label-medium-bold {
+  @include milan-font(18px, 18px, bold);
+}
+
+@mixin label-main {
+  @include milan-font(16px, 16px);
+}
+
+@mixin label-main-bold {
+  @include milan-font(16px, 16px, bold);
+}
+
+@mixin label-small {
+  @include milan-font(14px, 14px);
+}
+
+@mixin label-small-bold {
+  @include milan-font(14px, 14px, bold);
+}
+
+@mixin label-x-small {
+  @include milan-font(10px, 10px, bold);
+}
+
+@mixin primary-text-link {
+  @include font-small-bold;
+  color: $accent-red;
+
+  &:hover {
+    color: $accent-dark-red;
+  }
+}
+
+@mixin primary-text-link-lg {
+  @include font-main-bold;
+  color: $accent-red;
+
+  &:hover {
+    color: $accent-dark-red;
+  }
+}
+
+@mixin secondary-text-link {
+  @include font-small-bold;
+  color: $accent-cyan;
+
+  &:hover {
+    color: $accent-cyan-muted;
+  }
+}
+
+@mixin secondary-text-link-lg {
+  @include font-main-bold;
+  color: $accent-cyan;
+
+  &:hover {
+    color: $accent-cyan-muted;
+  }
+}
+
+/*--  Shimmer Linear Gradient  --*/
+$shimmerColor: rgba(51, 51, 79, 0.1) 0%, rgba(178, 178, 200, 0.2) 46.88%,
+  rgba(129, 129, 154, 0.1) 100%;
+
+@mixin gradient($direcion, $shimmerColor) {
+  background: linear-gradient($direcion, $shimmerColor);
+}

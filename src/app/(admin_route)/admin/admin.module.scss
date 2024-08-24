@@ -1,0 +1,41 @@
+.dashboard {
+  .card {
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+  }
+  .card_icon {
+    font-size: 32px;
+    line-height: 0;
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+  .info_card {
+    padding-bottom: 10px;
+    h6 {
+      font-size: 28px;
+      color: #012970;
+      font-weight: 700;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .sales_card {
+    .card_icon {
+      color: #4154f1;
+      background: #f6f6fe;
+    }
+  }
+  .revenue_card .card_icon {
+    color: #2eca6a;
+    background: #e0f8e9;
+  }
+  .customers_card .card_icon {
+    color: #ff771d;
+    background: #ffecdf;
+  }
+}

@@ -1,0 +1,151 @@
+// primary-btn, primary-lg-btn, primary-outline-btn, primary-outline-lg-btn
+// secondary-btn, secondary-lg-btn, secondary-outline-btn, secondary-outline-lg-btn
+// dark-btn, dark-lg-btn, dark-outline-btn, dark-outline-lg-btn
+// light-btn, light-lg-btn, light-outline-btn, light-outline-lg-btn
+// ibtn, lg-ibtn
+// danger, danger-lg, danger-trans, danger-trans-lg
+// success, success-lg, success-trans, success-trans-lg
+// disabled
+
+button,
+.button {
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  white-space: nowrap;
+  &.md-btn {
+    padding: 8px 16px;
+    height: 36px;
+    @include font-small-bold;
+  }
+
+  &.lg-btn {
+    padding: 12px 24px;
+    height: 48px;
+    @include font-main-bold;
+  }
+
+  // primary-btn ----------------------------------------------
+  &.primary-btn {
+    @extend .md-btn;
+    color: white !important;
+  }
+
+  &.primary-lg-btn {
+    @extend .primary-btn;
+    @extend .lg-btn;
+  }
+
+  &.primary-outline-btn {
+    @extend .md-btn;
+    background-color: transparent;
+    color: $primary-color !important;
+    border: 1px solid $primary-color;
+    &:hover {
+      background-color: $primary-color;
+      color: white !important;
+    }
+  }
+
+  &.primary-outline-lg-btn {
+    @extend .primary-outline-btn;
+    @extend .lg-btn;
+  }
+
+  &.primary-trans-btn {
+    @extend .md-btn;
+    color: $primary-color !important;
+  }
+
+  &.primary-trans-lg-btn {
+    @extend .primary-trans-btn;
+    @extend .lg-btn;
+  }
+
+  // dark-btn ----------------------------------------------
+  &.yellow-btn {
+    @extend .md-btn;
+
+    color: $primary-dark-blue;
+  }
+
+  // &.dark-lg-btn {
+  //     @extend .dark-btn;
+  //     @extend .lg-btn;
+  // }
+
+  // &.dark-outline-btn {
+  //     @extend .md-btn;
+  //     background-color: transparent;
+  //     color: $primary-dark-blue !important;
+  //     border: 2px solid $primary-dark-blue;
+  //     &:hover {
+  //         background-color: $primary-dark-blue;
+  //         color: white !important;
+  //     }
+  // }
+
+  // &.dark-outline-lg-btn {
+  //     @extend .dark-outline-btn;
+  //     @extend .lg-btn;
+  // }
+
+  // &.dark-trans-btn {
+  //     @extend .md-btn;
+  //     color: $primary-dark-blue !important;
+  //     &:hover {
+  //         color: $color-dark !important;
+  //     }
+  // }
+
+  // &.dark-trans-lg-btn {
+  //     @extend .dark-trans-btn;
+  //     @extend .lg-btn;
+  // }
+
+  // light-btn ----------------------------------------------
+  &.light-btn {
+    @extend .md-btn;
+    background-color: white;
+    color: $primary-dark-blue !important;
+    &:hover {
+      color: $primary-dark-blue !important;
+      background-color: $primary-dark-blue;
+    }
+  }
+
+  &.light-lg-btn {
+    @extend .light-btn;
+    @extend .lg-btn;
+  }
+
+  &.light-outline-btn {
+    @extend .md-btn;
+    background-color: transparent;
+    color: white !important;
+    border: 2px solid white;
+    &:hover {
+      background-color: white;
+      color: $primary-dark-blue !important;
+    }
+  }
+
+  &.light-outline-lg-btn {
+    @extend .light-outline-btn;
+    @extend .lg-btn;
+  }
+
+  &.light-trans-btn {
+    @extend .md-btn;
+    color: white !important;
+    &:hover {
+      color: $primary-dark-blue !important;
+    }
+  }
+
+  &.light-trans-lg-btn {
+    @extend .light-trans-btn;
+    @extend .lg-btn;
+  }
+}

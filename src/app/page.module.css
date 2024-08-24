@@ -47,7 +47,7 @@
 }
 
 .card {
-  padding: 1rem 1.2rem;
+  padding: 1rem 1rem;
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
@@ -70,7 +70,6 @@
   font-size: 0.9rem;
   line-height: 1.5;
   max-width: 30ch;
-  text-wrap: balance;
 }
 
 .center {
@@ -98,7 +97,7 @@
 
 .center::before,
 .center::after {
-  content: "";
+  content: '';
   left: 50%;
   position: absolute;
   filter: blur(45px);

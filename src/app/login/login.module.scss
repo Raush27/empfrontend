@@ -1,0 +1,23 @@
+.separator {
+  color: #134d75;
+  margin: 0 auto 20px;
+  width: 450px;
+  position: relative;
+  text-align: center;
+  &::after,
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26%;
+    border: 1px solid #134d75;
+    content: ' ';
+    display: block;
+  }
+  &::after {
+    right: 0;
+  }
+  &::before {
+    left: 0;
+  }
+}

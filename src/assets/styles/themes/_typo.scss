@@ -1,0 +1,19 @@
+h1,
+.h1 {
+  @include headline1;
+}
+
+h2,
+.h2 {
+  @include headline2;
+}
+
+h3,
+.h3 {
+  @include headline3;
+}
+
+h4,
+.h4 {
+  @include headline4;
+}

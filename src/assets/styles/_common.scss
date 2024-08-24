@@ -1,0 +1,35 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  color: $primary-dark-blue;
+}
+ul,
+ol {
+  margin: 0;
+}
+a {
+  color: inherit;
+  &:hover {
+    color: inherit;
+  }
+}
+.no-pointer {
+  pointer-events: none;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.col-white {
+  color: white;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
